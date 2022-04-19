@@ -3,18 +3,19 @@ informado de forma decrescente.
 Ex: (10) => 10 8 6 4 2 0
 */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function decTypeOddNumba(limit) {
-    if (limit <= 0) throw new Error("Numbers less or equals than zero are not accepted");
-    let rst = "";
-    for (let i = (limit % 2 == 0 ? limit : limit - 1); i > 0 ; i--) rst += i + " ";
+    if (IsNaN(limit)) throw new Error('Only numbars');
+    if (limit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
+    let rst = '';
+    for (let i = (limit % 2 == 0 ? limit : limit - 1); i > 0 ; i--) rst += i + ' ';
     return rst;
 }
 
 function main() {
     try {
-        console.log("Contar pares até 0");
+        console.log('Contar pares até 0');
         let cn = Number(PromptSync('Insira o valor do contador: '));
         console.log(decTypeOddNumba(cn));
     } catch (err) {

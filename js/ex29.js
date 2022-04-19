@@ -1,6 +1,6 @@
 /* Implementar uma função que verifique se todas as vogais aparecem em um texto. */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function niceBoi(phrase) {
     let a = 0;
@@ -22,7 +22,7 @@ function niceBoi(phrase) {
 
 function main() {
     try {
-        console.log("Verificar se todas as vogais aparecem");
+        console.log('Verificar se todas as vogais aparecem');
         let text = PromptSync('Insira o texto: ');
         console.log(niceBoi(text));
     } catch (err) {

@@ -3,22 +3,23 @@ invertido a partir da quantidade de linhas, conforme abaixo:
 Exemplo: 5 linhas
 */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function revTriangle(side) {
-    if (side <= 0) throw new Error("Numbers less or equals than zero are not accepted");
-    let rst = "";
+    if (IsNaN(side)) throw new Error('Only numbars');
+    if (side <= 0) throw new Error('Numbers less or equals than zero are not accepted');
+    let rst = '';
     for (let row = 0; row <= side; row++) {
-        for (let i = side; i > row; i--) rst += "  ";
-        for (let ii = 0; ii < row; ii++) rst += "* ";
-        rst += "\n";
+        for (let i = side; i > row; i--) rst += '  ';
+        for (let ii = 0; ii < row; ii++) rst += '* ';
+        rst += '\n';
     }
     return rst;
 }
 
 function main() {
     try {
-        console.log("Desenhar retângulo espelhado");
+        console.log('Desenhar retângulo espelhado');
         let numba = Number(PromptSync('Insira a numba: '));
         console.log(revTriangle(numba));
     } catch (err) {

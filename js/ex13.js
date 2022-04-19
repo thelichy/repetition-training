@@ -2,21 +2,22 @@
 quantidade de linhas, conforme abaixo:
 */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function square(side) {
-    if (side <= 0) throw new Error("Numbers less or equals than zero are not accepted");
-    let rst = "";
+    if (IsNaN(side)) throw new Error('Only numbars');
+    if (side <= 0) throw new Error('Numbers less or equals than zero are not accepted');
+    let rst = '';
     for (let row = 0; row < side; row++) {
-        for (let i = 0; i < side; i++) rst += "* ";
-        rst += "\n";
+        for (let i = 0; i < side; i++) rst += '* ';
+        rst += '\n';
     }
     return rst;
 }
 
 function main() {
     try {
-        console.log("Desenhar quadrado");
+        console.log('Desenhar quadrado');
         let numba = Number(PromptSync('Insert a numba: '));
         console.log(square(numba));
     } catch (err) {

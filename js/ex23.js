@@ -2,21 +2,22 @@
 linhas, conforme abaixo:
 */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function triangle(side) {
-    if (side <= 0) throw new Error("Numbers less or equals than zero are not accepted");
-    let rst = "";
+    if (IsNaN(side)) throw new Error('Only numbars');
+    if (side <= 0) throw new Error('Numbers less or equals than zero are not accepted');
+    let rst = '';
     for (let row = 1; row <= side; row++) {
-        for (let i = 1; i <= row; i++) rst += row + " ";
-        rst += "\n";
+        for (let i = 1; i <= row; i++) rst += row + ' ';
+        rst += '\n';
     }
     return rst;
 }
 
 function main() {
     try {
-        console.log("Desenhar triângulo");
+        console.log('Desenhar triângulo');
         let numba = Number(PromptSync('Insira o valor do lado: '));
         console.log(triangle(numba));
     } catch (err) {

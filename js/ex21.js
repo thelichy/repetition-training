@@ -5,10 +5,11 @@ lançar um erro.
 Ex: Potência de 3 elevado a 3 => 27
 */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function power(numba, exponent) {
-    if (numba <= 0) throw new Error("Numbers less than zero are not accepted, except the exponent");
+    if (IsNaN(numba) || IsNaN(exponent)) throw new Error('Only numbars');
+    if (numba <= 0) throw new Error('Numbers less than zero are not accepted, except the exponent');
     if (exponent == 0) return 0;
     let numbe = numba;
     for (let i = 1; i < exponent; i++) numbe *= numba;
@@ -17,7 +18,7 @@ function power(numba, exponent) {
 
 function main() {
     try {
-        console.log("Elevar à potência");
+        console.log('Elevar à potência');
         let numba = Number(PromptSync('Insira um número: '));
         let numbar = Number(PromptSync('Insira a potência: '));
         console.log(power(numba, numbar));

@@ -2,15 +2,16 @@
  número informado.
 */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function sum(limit) {
-    if (limit <= 0) throw new Error("Numbers less or equals than zero are not accepted");
+    if (IsNaN(limit)) throw new Error('Only numbars');
+    if (limit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rt = 0;
-    let msg = "";
+    let msg = '';
     for (let i = 2; i <= (limit % 2 != 0 ? limit - 1 : limit); i += 2) {
         if (i == limit) msg += i;
-        else msg += i + " + ";
+        else msg += i + ' + ';
         rt += i;
     }
     return `${msg} = ${rt}`;
@@ -18,7 +19,7 @@ function sum(limit) {
 
 function main() {
     try {
-        console.log("Somar pares até");
+        console.log('Somar pares até');
         let numba = Number(PromptSync('Insira o limite: '));
         console.log(sum(numba));
     } catch (err) {

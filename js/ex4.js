@@ -2,19 +2,20 @@
 Ex: (3, 11) => 3 4 5 6 7 8 9 10 11
 */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function typeNumbar(ini, limit) {
-    if (limit <= 0) throw new Error("Numbers less or equals than zero are not accepted");
-    if (ini > limit) throw new Error("The first numba cant be bigger than the second numba");
-    let rst = "";
-    for (let i = ini; i <= limit; i++) rst += i + " ";
+    if (IsNaN(limit) || IsNaN(int)) throw new Error('Only numbars');
+    if (limit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
+    if (ini > limit) throw new Error('The first numba cant be bigger than the second numba');
+    let rst = '';
+    for (let i = ini; i <= limit; i++) rst += i + ' ';
     return rst;
 }
 
 function main() {
     try {
-        console.log("Contar intervalo");
+        console.log('Contar intervalo');
         let vl = Number(PromptSync('Insira o valor inicial: '));
         let lm = Number(PromptSync('Insira o valor limite: '));
         console.log(typeNumbar(vl, lm));

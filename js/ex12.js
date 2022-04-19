@@ -4,18 +4,19 @@ Exemplo: 4 pontos
 * * * *
 */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
-function row(length) {
-    if (length <= 0) throw new Error("Numbers less or equals than zero are not accepted");
-    let rst = "";
-    for (let row = 0; row < length; row++) rst += "* ";
+function row(rlength) {
+    if (IsNaN(rlength)) throw new Error('Only numbars');
+    if (rlength <= 0) throw new Error('Numbers less or equals than zero are not accepted');
+    let rst = '';
+    for (let row = 0; row < rlength; row++) rst += '* ';
     return rst;
 }
 
 function main() {
     try {
-        console.log("Desenhar linha");
+        console.log('Desenhar linha');
         let numba = Number(PromptSync('Insert a numba: '));
         console.log(row(numba));
     } catch (err) {

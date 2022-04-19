@@ -1,10 +1,10 @@
 /*41. Implementar uma função que implemente a criptografia ZENIT POLAR. */
 
-const PromptSync = require("prompt-sync")();
+const PromptSync = require('prompt-sync')();
 
 function zenitPolar(phrase) {
     phrase = phrase.toLowerCase();
-    let rst = "";
+    let rst = '';
     for (let i = 0; i < phrase.length; i++) {
         let a = phrase[i];
         if (a == 'z') rst += 'p';
@@ -24,7 +24,7 @@ function zenitPolar(phrase) {
 
 function main() {
     try {
-        console.log("Criptografia Zenit Polar");
+        console.log('Criptografia Zenit Polar');
         let text = PromptSync('Insira um texto: ');
         console.log(zenitPolar(text));
     } catch (err) {
