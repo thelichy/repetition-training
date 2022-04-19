@@ -5,7 +5,7 @@ Ex: (10) => 1 2 3 4 5 6 7 8 9 10
 const PromptSync = require('prompt-sync')();
 
 function count(limit) {
-    if (IsNaN(limit)) throw new Error('Only numbars');
+    if (isNaN(limit)) throw new Error('Only numbars');
     if (limit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     for (let i = 1; i <= limit; i++) rst += i + ' ';

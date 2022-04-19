@@ -3,7 +3,7 @@
 const PromptSync = require('prompt-sync')();
 
 function contarDigitos(numba, digit) {
-    if (IsNaN(numba) || IsNaN(digit)) throw new Error('Only numbars');
+    if (isNaN(numba) || isNaN(digit)) throw new Error('Only numbars');
     if (numba <= 0 || digit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let number = String(numba);
     let dig = String(digit);

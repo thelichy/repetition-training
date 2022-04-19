@@ -5,7 +5,7 @@
 const PromptSync = require('prompt-sync')();
 
 function triangle(side) {
-    if (IsNaN(side)) throw new Error('Only numbars');
+    if (isNaN(side)) throw new Error('Only numbars');
     if (side <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     let x;

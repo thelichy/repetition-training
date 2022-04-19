@@ -5,7 +5,7 @@ informado.
 const PromptSync = require('prompt-sync')();
 
 function sum(limit) {
-    if (IsNaN(limit)) throw new Error('Only numbars');
+    if (isNaN(limit)) throw new Error('Only numbars');
     if (limit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rt = 0;
     let msg = '';

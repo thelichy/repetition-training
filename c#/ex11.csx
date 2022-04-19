@@ -6,7 +6,7 @@ public string Table(int firstNumba, int secondNumba)
 {
     if (secondNumba <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
     string rst = "";
-    for(int i = 1; secondNumba >= i; i++) rst += $"{firstNumba} x {i} = {i * firstNumba}";
+    for(int i = 1; secondNumba >= i; i++) rst += $"{firstNumba} x {i} = {i * firstNumba}\n";
     return rst;
 }
 
@@ -18,7 +18,7 @@ public void Main()
         int numba = Convert.ToInt32(Console.ReadLine());
         Console.Write("insert a other numba: ");
         int numbaa = Convert.ToInt32(Console.ReadLine());
-        Table(numba, numbaa);   
+        Console.WriteLine(Table(numba, numbaa));
     }
     catch (Exception ex)
     {

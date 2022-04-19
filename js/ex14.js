@@ -6,7 +6,7 @@ Exemplo: 4 linhas e 2 colunas
 const PromptSync = require('prompt-sync')();
 
 function rectangle(side, height) {
-    if (IsNaN(side) || IsNaN(height)) throw new Error('Only numbars');
+    if (isNaN(side) || isNaN(height)) throw new Error('Only numbars');
     if (side <= 0 || height <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     for (let i = 0; i < side; i++)

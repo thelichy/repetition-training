@@ -5,7 +5,7 @@ Ex: (10) => 0 2 4 6 8 10
 const PromptSync = require('prompt-sync')();
 
 function odd(limit) {
-    if (IsNaN(limit)) throw new Error('Only numbars');
+    if (isNaN(limit)) throw new Error('Only numbars');
     if (limit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     for (let i = 0; i <= limit; i += 2) rst += i + ' ';

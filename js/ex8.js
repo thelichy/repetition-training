@@ -6,7 +6,7 @@ Ex: (3, 11) => 11 10 9 8 7 6 5 4 3
 const PromptSync = require('prompt-sync')();
 
 function decTypeNumbar(ini, limit) {
-    if (IsNaN(limit) || IsNaN(ini)) throw new Error('Only numbars');
+    if (isNaN(limit) || IsNaN(ini)) throw new Error('Only numbars');
     if (limit <= 0 || ini <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     if (ini < limit) throw new Error('The second numba cant be bigger than the first numba');
     let rst = '';

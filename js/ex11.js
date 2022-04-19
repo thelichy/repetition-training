@@ -5,7 +5,7 @@
 const PromptSync = require('prompt-sync')();
 
 function table(firstNumba, secondNumba) {
-    if (IsNaN(secondNumba) || IsNaN(firstNumba)) throw new Error('Only numbars');
+    if (isNaN(secondNumba) || isNaN(firstNumba)) throw new Error('Only numbars');
     if (secondNumba <= 0 || firstNumba <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     for(let i = 1; secondNumba >= i; i++) rst += `${firstNumba} x ${i} = ${i * firstNumba}\n`;

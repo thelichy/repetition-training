@@ -3,7 +3,7 @@
 const PromptSync = require('prompt-sync')();
 
 function factorial(numba) {
-    if (IsNaN(numba)) throw new Error('Only numbars');
+    if (isNaN(numba)) throw new Error('Only numbars');
     if (numba <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rt = 1;
     let msg = '';

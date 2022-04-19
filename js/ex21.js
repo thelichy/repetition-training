@@ -8,7 +8,7 @@ Ex: Potência de 3 elevado a 3 => 27
 const PromptSync = require('prompt-sync')();
 
 function power(numba, exponent) {
-    if (IsNaN(numba) || IsNaN(exponent)) throw new Error('Only numbars');
+    if (isNaN(numba) || isNaN(exponent)) throw new Error('Only numbars');
     if (numba <= 0) throw new Error('Numbers less than zero are not accepted, except the exponent');
     if (exponent == 0) return 0;
     let numbe = numba;

@@ -5,7 +5,7 @@ A mensagem deve estar no formato: 'O dobro de X é Y'.
 const PromptSync = require('prompt-sync')();
 
 function dobler(limit) {
-    if (IsNaN(limit)) throw new Error('Only numbars');
+    if (isNaN(limit)) throw new Error('Only numbars');
     if (limit <= 0) throw new Error('The numbas cant be minor than one');
     let rst = '';
     for (let i = 0; i < limit; i++) rst += `O dobro de ${i} é ${i*2}\n`;

@@ -6,7 +6,7 @@ Ex: (3, 11) => 11 10 9 8 7 6 5 4 3
 public string DecTypeNumbar(int ini, int limit)
 {
     if (limit <= 0 || ini <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
-    if (ini < limit) throw new ArgumentException("The second numba cant be bigger than the first numba");
+    if (ini > limit) throw new ArgumentException("The second numba cant be bigger than the first numba");
     string rst = "";
     for (int i = limit; i >= ini; i--) rst += i + " ";    
     return rst;

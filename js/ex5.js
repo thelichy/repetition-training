@@ -6,7 +6,7 @@ Ex: (10) => 10 9 8 7 6 5 4 3 2 1
 const PromptSync = require('prompt-sync')();
 
 function decTypeNumba(limit) {
-    if (IsNaN(limit)) throw new Error('Only numbars');
+    if (isNaN(limit)) throw new Error('Only numbars');
     if (limit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     for (let i = limit; i >= 1; i--) rst += i + ' ';

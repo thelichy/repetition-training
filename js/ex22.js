@@ -5,7 +5,7 @@ a partir da quantidade de linhas, conforme abaixo:
 const PromptSync = require('prompt-sync')();
 
 function losango(side) {
-    if (IsNaN(side)) throw new Error('Only numbars');
+    if (isNaN(side)) throw new Error('Only numbars');
     if (side <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     for (let row = 0; row <= side; row++) {
@@ -24,7 +24,7 @@ function losango(side) {
 
 function losangoo(side)
 {
-    if (IsNaN(side)) throw new Error('Only numbars');
+    if (isNaN(side)) throw new Error('Only numbars');
     if (side <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     for (let row = 0; row <= side; row++) {

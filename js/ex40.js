@@ -6,7 +6,7 @@ Sequência Fibonacci: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89
 const PromptSync = require('prompt-sync')();
 
 function fibonacci(pos) {
-    if (IsNaN(pos)) throw new Error('Only numbars');
+    if (isNaN(pos)) throw new Error('Only numbars');
     if (pos <= 2) throw new Error('Numbers less or equals than 2 are not accepted');
     let numba = 1;
     let prevnumba = 1;

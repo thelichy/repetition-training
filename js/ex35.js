@@ -3,7 +3,7 @@
 const PromptSync = require('prompt-sync')();
 
 function palindromo(numba) {
-    if (IsNaN(numba)) throw new Error('Only numbars');
+    if (isNaN(numba)) throw new Error('Only numbars');
     if (numba <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rsp = '';
     let phrase = numba + '';

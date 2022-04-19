@@ -3,7 +3,7 @@
 const PromptSync = require('prompt-sync')();
 
 function numeroPrimo(numba) {
-    if (IsNaN(numba)) throw new Error('Only numbars');
+    if (isNaN(numba)) throw new Error('Only numbars');
     if (numba <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let c = 0;
     for (let i = 2; i < numba; i++) if (numba % i == 0) c += 1;

@@ -7,7 +7,7 @@ Exemplo: 4 pontos
 const PromptSync = require('prompt-sync')();
 
 function row(rlength) {
-    if (IsNaN(rlength)) throw new Error('Only numbars');
+    if (isNaN(rlength)) throw new Error('Only numbars');
     if (rlength <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     let rst = '';
     for (let row = 0; row < rlength; row++) rst += '* ';
