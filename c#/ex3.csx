@@ -7,10 +7,7 @@ public string Even(int limit)
     if (limit <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
 
     string rst = "";
-    for (int i = 1; i <= limit; i += 2)
-    {
-        rst += i + " ";
-    }
+    for (int i = 1; i <= limit; i += 2) rst += i + " ";
     return rst;
 }
 

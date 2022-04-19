@@ -10,8 +10,8 @@ public bool PasswordStrength(string passwd)
     string[] symbols = {"!", "@", "#", "$", "%", "&", "*", "+", "-", "_", "<", ">"};
     for (int i = 0; i < passwd.Length; i++)
     {
-        if (numbas.Contains(passwd.Substring(i, 1))) num += 1;
-        if (symbols.Contains(passwd.Substring(i, 1))) ch += 1;
+        if (numbas.Contains(passwd[i]+"")) num += 1;
+        if (symbols.Contains(passwd[i]+"")) ch += 1;
     }
     if ((num >= 2 ? 1 : 0) + (ch >= 2 ? 1 : 0) + dig == 3) return true;
     else return false;

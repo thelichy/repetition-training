@@ -5,7 +5,7 @@ Convert.ToInt32(..) para C#, e charCodeAt(...) para JS.
 public string WordToAscii(string word)
 {
     string rsp = "";
-    for (int i = 0; i < word.Length; i++) rsp += (Convert.ToInt32(word[i])).ToString() + " ";
+    for (int i = 0; i < word.Length; i++) rsp += (Convert.ToInt32(word[i])) + " ";
     return rsp;
 }
 

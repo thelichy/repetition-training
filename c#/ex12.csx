@@ -8,10 +8,7 @@ public string Row(int length)
 {
     if (length <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
     string rst = "";
-    for (int row = 0; row < length; row++)
-    {
-        rst += "* ";
-    }
+    for (int row = 0; row < length; row++) rst += "* ";
     return rst;
 }
 

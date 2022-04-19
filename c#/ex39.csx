@@ -4,10 +4,7 @@ public bool NumeroPrimo(int numba)
 {
     if (numba <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
     int c = 0;
-    for (int i = 2; i < numba; i++)
-    {
-        if (numba % i == 0) c += 1;
-    }
+    for (int i = 2; i < numba; i++) if (numba % i == 0) c += 1;
     return c == 0 ? true : false;
 }
 

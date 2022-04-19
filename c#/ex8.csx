@@ -8,10 +8,7 @@ public string DecTypeNumbar(int ini, int limit)
     if (limit <= 0 || ini <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
     if (ini < limit) throw new ArgumentException("The second numba cant be bigger than the first numba");
     string rst = "";
-    for (int i = limit; i >= ini; i--)
-    {
-        rst += i + " ";    
-    }
+    for (int i = limit; i >= ini; i--) rst += i + " ";    
     return rst;
 }
 

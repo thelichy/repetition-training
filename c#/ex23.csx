@@ -8,10 +8,7 @@ public string Triangle(int side)
     string rst = "";
     for (int row = 1; row <= side; row++)
     {
-        for (int i = 1; i <= row; i++)
-        {
-            rst += row + " ";
-        }
+        for (int i = 1; i <= row; i++) rst += row + " ";
         rst += "\n";
     }
     return rst;

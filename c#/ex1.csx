@@ -5,11 +5,8 @@ Ex: (10) => 1 2 3 4 5 6 7 8 9 10
 public string Count(int limit)
 {
     if (limit <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
-    string rst = ";";
-    for (int i = 1; i <= limit; i++)
-    {
-        rst += i + " ";
-    }
+    string rst = "";
+    for (int i = 1; i <= limit; i++) rst += i + " ";
     return rst;
 }
 

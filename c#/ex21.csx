@@ -9,12 +9,9 @@ public int Power(int numba, int exponent)
 {
     if (numba <= 0) throw new ArgumentException("Numbers less than zero are not accepted, except the exponent");
     if (exponent == 0) return 0;
-    int number = numba;
-    for (int i = 1; i < exponent; i++)
-    {
-        number *= numba;
-    }
-    return number;
+    int numbe = numba;
+    for (int i = 1; i < exponent; i++) numbe *= numba;
+    return numbe;
 }
 
 public void Main()

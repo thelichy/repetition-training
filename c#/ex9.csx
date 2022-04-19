@@ -11,10 +11,7 @@ public string DecTypeMult(int ini, int limit)
     string rst = "";
     for (int i = 0; i <= limit; i += ini)
     {
-        if (i % ini == 0)
-        {
-            rst += i + " ";
-        }
+        if (i % ini == 0) rst += i + " ";
     }
     return rst;
 }

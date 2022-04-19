@@ -7,10 +7,7 @@ public string TypeNumbar(int ini, int limit)
     if (limit <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
     if (ini > limit) throw new ArgumentException("The first numba cant be bigger than the second numba");
     string rst = "";
-    for (int i = ini; i <= limit; i++)
-    {
-        rst += i + " ";    
-    }
+    for (int i = ini; i <= limit; i++) rst += i + " ";
     return rst;
 }
 

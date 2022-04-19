@@ -9,10 +9,7 @@ public string Rectangle(int side, int height)
     string rst = "";
     for (int i = 0; i < side; i++)
     {
-        for (int ii = 0; i < height; ii++)
-        {
-            rst += "* ";
-        }
+        for (int ii = 0; i < height; ii++) rst += "* ";
         rst += "\n";
     }
     return rst;

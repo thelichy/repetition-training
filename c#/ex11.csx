@@ -6,10 +6,7 @@ public string Table(int firstNumba, int secondNumba)
 {
     if (secondNumba <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
     string rst = "";
-    for(int i = 1; secondNumba >= i; i++)
-    {
-        rst += $"{firstNumba} x {i} = {i * firstNumba}";
-    }
+    for(int i = 1; secondNumba >= i; i++) rst += $"{firstNumba} x {i} = {i * firstNumba}";
     return rst;
 }
 
@@ -26,6 +23,7 @@ public void Main()
     catch (Exception ex)
     {
         Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
     }
 }
 

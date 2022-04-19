@@ -7,10 +7,7 @@ public string DecTypeNumba(int limit)
 {
     if (limit <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
     string rst = "";
-    for (int i = limit; i >= 1; i--)
-    {
-        rst += i + " ";
-    }
+    for (int i = limit; i >= 1; i--) rst += i + " ";
     return rst;
 }
 

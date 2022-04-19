@@ -6,10 +6,7 @@ public string Dobler(int limit)
 {
     if (limit <= 0) throw new ArgumentException("The numbas cant be minor than one");
     string rst = "";
-    for (int i = 0; i < limit; i++)
-    {
-        rst += $"O dobro de {i} é {i*2}\n";
-    }
+    for (int i = 0; i < limit; i++) rst += $"O dobro de {i} é {i*2}\n";
     return rst;
 }
 
@@ -17,7 +14,7 @@ public void Main()
 {
     try
     {
-        Console.Write("\nInsira o valor do limite: ");
+        Console.Write("Dobro\nInsira o valor do limite: ");
         int lm = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine(Dobler(lm));
     }

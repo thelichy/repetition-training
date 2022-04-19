@@ -1,13 +1,14 @@
+/*13. Implementar uma função que retorne um texto que represente a forma de um quadrado a partir da 
+quantidade de linhas, conforme abaixo:
+*/
+
 public string Square(int side)
 {
     if (side <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
     string rst = "";
     for (int row = 0; row < side; row++)
     {
-        for (int i = 0; i < side; i++)
-        {
-            rst += "* ";
-        }
+        for (int i = 0; i < side; i++) rst += "* ";
         rst += "\n";
     }
     return rst;

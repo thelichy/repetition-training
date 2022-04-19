@@ -1,12 +1,29 @@
+/*15. Implementar uma função que retorne um texto que represente a forma de um triângulo a partir da quantidade 
+de linhas, conforme abaixo:
+Exemplo: 5 linhas
+*/
+
+const PromptSync = require("prompt-sync")();
+
 function triangle(side) {
-
-    for(let i = 1; i <= side; i++) {
-
-        for(let ii = 1; ii <= i; ii++) {
-            process.stdout.write('* ')
-        }
-        console.log();
+    if (side <= 0) throw new Error("Numbers less or equals than zero are not accepted");
+    let rst = "";
+    for (let row = 1; row <= side; row++) {
+        for (let i = 1; i <= row; i++) rst += "* ";
+        rst += "\n";
     }
-};
+    return rst;
+}
 
-triangle(7);
+function main() {
+    try {
+        console.log("Desenhar triângulo");
+        let numba = Number(PromptSync('Insira a numba: '));
+        console.log(triangle(numba));
+    } catch (err) {
+        console.log(`Um erro ocorreu\n${err.message}`);
+        main();
+    }
+}
+
+main();

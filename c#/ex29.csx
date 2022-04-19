@@ -10,11 +10,11 @@ public bool NiceBoi(string phrase)
     phrase = phrase.ToLower();
     for (int ii = 0; ii < phrase.Length; ii++)
     {
-        if (Convert.ToString(phrase[i]).Contains("a")) a = 1;
-        if (Convert.ToString(phrase[i]).Contains("e")) e = 1;
-        if (Convert.ToString(phrase[i]).Contains("i")) i = 1;
-        if (Convert.ToString(phrase[i]).Contains("o")) o = 1;
-        if (Convert.ToString(phrase[i]).Contains("u")) u = 1;
+        if (phrase[i] == 'a') a = 1;
+        if (phrase[i] == 'e') e = 1;
+        if (phrase[i] == 'i') i = 1;
+        if (phrase[i] == 'o') o = 1;
+        if (phrase[i] == 'u') u = 1;
     }
     return a + e + i + o + u == 5 ? true : false;
 }
