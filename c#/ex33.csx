@@ -4,9 +4,24 @@ public bool Palindromo(string words)
 {
     string phrase = words.ToLower();
     string rsp = "";
-    for (int i = phrase.Length - 1; i >= 0; i--) rsp += phrase.Substring(i, 1);
+    for (int i = phrase.Length - 1; i >= 0; i--) rsp += phrase[i];
     if (rsp.Replace(" ", "") == phrase.Replace(" ", "")) return true;
     else return false;
 }
 
-Console.WriteLine(Palindromo("Luz Azul"));
+public void Main()
+{
+    try
+    {
+        Console.Write("Verificar se um texto é um palíndromo\nInsira o texto: ");
+        string text = Console.ReadLine();
+        Console.WriteLine(Palindromo(text));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
+    }
+}
+
+Main();

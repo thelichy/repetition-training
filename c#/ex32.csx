@@ -10,4 +10,19 @@ public string Inverter(string phrase)
     return rsp;
 }
 
-Console.WriteLine(Inverter("Olha só que legal"));
+public void Main()
+{
+    try
+    {
+        Console.Write("Inverter os caracteres\nInsira o texto: ");
+        string text = Console.ReadLine();
+        Console.WriteLine(Inverter(text));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
+    }
+}
+
+Main();

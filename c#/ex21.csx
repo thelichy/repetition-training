@@ -7,6 +7,8 @@ Ex: Potência de 3 elevado a 3 => 27
 
 public int Power(int numba, int exponent)
 {
+    if (numba <= 0) throw new ArgumentException("Numbers less than zero are not accepted, except the exponent");
+    if (exponent == 0) return 0;
     int number = numba;
     for (int i = 1; i < exponent; i++)
     {
@@ -15,4 +17,21 @@ public int Power(int numba, int exponent)
     return number;
 }
 
-Console.WriteLine(Power(2, 10));
+public void Main()
+{
+    try
+    {
+        Console.Write("Elevar à potência\nInsira um número: ");
+        int numba = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Insira a potência: ");
+        int numbar = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(Power(numba, numbar));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
+    }
+}
+
+Main();

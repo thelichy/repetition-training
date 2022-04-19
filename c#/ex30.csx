@@ -5,8 +5,26 @@ public int ContarFrequencia(string phrase, string character)
     int counter = 0;
     for (int i = 0; i < phrase.Length; i++)
     {
-        if (phrase.ToLower().Substring(i, 1).Contains(character)) counter++;
+        if (Convert.ToString(phrase[i]).ToLower().Contains(character)) counter++;
     }
     return counter;
 }
 
+public void Main()
+{
+    try
+    {
+        Console.Write("Contar a frequência de um caractere\nInsira o texto: ");
+        string text = Console.ReadLine();
+        Console.Write("Insira o caractere: ");
+        string character = Console.ReadLine();
+        Console.WriteLine(ContarFrequencia(text, character));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
+    }
+}
+
+Main();

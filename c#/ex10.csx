@@ -2,10 +2,30 @@
 A mensagem deve estar no formato: "O dobro de X é Y".
 */
 
-public void Dobler(int limit)
+public string Dobler(int limit)
 {
+    if (limit <= 0) throw new ArgumentException("The numbas cant be minor than one");
+    string rst = "";
     for (int i = 0; i < limit; i++)
     {
-        Console.Write("O dobro de {0} é {1}", i, (i*2));
+        rst += $"O dobro de {i} é {i*2}\n";
+    }
+    return rst;
+}
+
+public void Main()
+{
+    try
+    {
+        Console.Write("\nInsira o valor do limite: ");
+        int lm = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(Dobler(lm));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"\nUm erro ocorreu\n{ex.Message}");
+        Main();
     }
 }
+
+Main();

@@ -4,12 +4,30 @@ Exemplo: 4 pontos
 * * * *
 */
 
-public void Row(int length)
+public string Row(int length)
 {
     if (length <= 0) throw new ArgumentException("Numbers less or equals than zero are not accepted");
+    string rst = "";
     for (int row = 0; row < length; row++)
     {
-        Console.Write("* ");
+        rst += "* ";
+    }
+    return rst;
+}
+
+public void Main()
+{
+    try
+    {
+        Console.Write("Desenhar linha\nInsert a numba: ");
+        int numba = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(Row(numba));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
     }
 }
 
+Main();

@@ -13,10 +13,23 @@ public bool PasswordStrength(string passwd)
         if (numbas.Contains(passwd.Substring(i, 1))) num += 1;
         if (symbols.Contains(passwd.Substring(i, 1))) ch += 1;
     }
-    ch = ch >= 2 ? 1 : 0;
-    num = num >= 2 ? 1 : 0;
-    if (num + ch + dig == 3) return true;
+    if ((num >= 2 ? 1 : 0) + (ch >= 2 ? 1 : 0) + dig == 3) return true;
     else return false;
 }
 
-Console.WriteLine(PasswordStrength(""));
+public void Main()
+{
+    try
+    {
+        Console.Write("Verificar se a senha é forte\nInsira a senha: ");
+        string text = Console.ReadLine();
+        Console.WriteLine(PasswordStrength(text));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
+    }
+}
+
+Main();

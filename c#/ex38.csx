@@ -6,7 +6,7 @@ public string StringToBinary(string phrase)
     string c = "";
     for (int i = 0; i < phrase.Length; i++)
     {
-        a = Convert.ToInt32(Convert.ToChar(phrase.Substring(i, 1)));
+        a = Convert.ToInt32(phrase[i]);
         if (a >= 128)
         {
             c += "1";
@@ -68,4 +68,19 @@ public string StringToBinary(string phrase)
     return c;
 }
 
-Console.WriteLine(StringToBinary("Careca kkk"));
+public void Main()
+{
+    try
+    {
+        Console.Write("Converter para binário\nInsira o texto: ");
+        string text = Console.ReadLine();
+        Console.WriteLine(StringToBinary(text));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
+    }
+}
+
+Main();

@@ -10,3 +10,20 @@ public int Inverter(int numba)
     }
     return Convert.ToInt32(rsp);
 }
+
+public void Main()
+{
+    try
+    {
+        Console.Write("Inverter os dígitos de um número\nInsira o número: ");
+        int numba = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(Inverter(numba));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Um erro ocorreu\n{ex.Message}");
+        Main();
+    }
+}
+
+Main();
