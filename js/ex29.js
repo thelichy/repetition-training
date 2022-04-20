@@ -11,11 +11,11 @@ function niceBoi(phrase) {
     phrase = phrase.toLowerCase();
     for (let ii = 0; ii < phrase.length; ii++)
     {
-        if (phrase[i] == 'a') a = 1;
-        if (phrase[i] == 'e') e = 1;
-        if (phrase[i] == 'i') i = 1;
-        if (phrase[i] == 'o') o = 1;
-        if (phrase[i] == 'u') u = 1;
+        if (phrase[ii] == 'a') a = 1;
+        if (phrase[ii] == 'e') e = 1;
+        if (phrase[ii] == 'i') i = 1;
+        if (phrase[ii] == 'o') o = 1;
+        if (phrase[ii] == 'u') u = 1;
     }
     return a + e + i + o + u == 5 ? true : false;
 }

@@ -5,7 +5,7 @@ Ex: (3, 11) => 3 4 5 6 7 8 9 10 11
 const PromptSync = require('prompt-sync')();
 
 function typeNumbar(ini, limit) {
-    if (isNaN(limit) || IsNaN(int)) throw new Error('Only numbars');
+    if (isNaN(limit) || isNaN(ini)) throw new Error('Only numbars');
     if (limit <= 0) throw new Error('Numbers less or equals than zero are not accepted');
     if (ini > limit) throw new Error('The first numba cant be bigger than the second numba');
     let rst = '';

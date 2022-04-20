@@ -17,7 +17,7 @@ function main() {
         console.log('Tabuada');
         let numba = Number(PromptSync('Insert a numba: '));
         let numbaa = Number(PromptSync('insert a other numba: '));
-        table(numba, numbaa);   
+        console.log(table(numba, numbaa));   
     } catch (err) {
         console.log(`Um erro ocorreu\n${err.message}`);
         main();

@@ -5,10 +5,10 @@ Ex: (3, 11) => 11 10 9 8 7 6 5 4 3
 
 const PromptSync = require('prompt-sync')();
 
-function decTypeNumbar(ini, limit) {
-    if (isNaN(limit) || IsNaN(ini)) throw new Error('Only numbars');
+function decTypeNumbar(limit, ini) {
+    if (isNaN(limit) || isNaN(ini)) throw new Error('Only numbars');
     if (limit <= 0 || ini <= 0) throw new Error('Numbers less or equals than zero are not accepted');
-    if (ini < limit) throw new Error('The second numba cant be bigger than the first numba');
+    if (ini > limit) throw new Error('The second numba cant be bigger than the first numba');
     let rst = '';
     for (let i = limit; i >= ini; i--) rst += i + ' ';    
     return rst;

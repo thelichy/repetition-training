@@ -11,7 +11,7 @@ function rectangle(side, height) {
     let rst = '';
     for (let i = 0; i < side; i++)
     {
-        for (let ii = 0; i < height; ii++) rst += '* ';
+        for (let ii = 0; ii < height; ii++) rst += '* ';
         rst += '\n';
     }
     return rst;
