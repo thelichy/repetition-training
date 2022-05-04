@@ -7,11 +7,16 @@ public string StringToBinary(string phrase)
     for (int i = 0; i < phrase.Length; i++)
     {
         a = Convert.ToInt32(phrase[i]);
-        for (int d = 128; d != 0; d -= d / 2)
+        for (int ii = 128; ii >= 1; ii /= 2)
         {
-            if (a >= d) c += "1";
+            if (a >= ii) 
+            {
+                c += "1";
+                a -= ii;
+            }
             else c += "0";
         }
+        c += " ";
     }
     return c;
 }

@@ -17,7 +17,6 @@ function stringToBinary(phrase) {
     }
     return c;
 }
-
 function main() {
     try {
         console.log('Converter para binário');
