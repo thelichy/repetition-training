@@ -1,24 +1,55 @@
 /* 03. Implementar uma função que verifique se uma palavra aparece em um texto */
 
-public string Substring(string phrase, int pos, int comp)
+public bool Contem(string texto, string palavra)
 {
-    if (pos < 0 || comp < 1 || comp > phrase.Length - pos + 1) throw new ArgumentException("Invalid values");
+    bool c;
 
-    string rst = "";
-    for(int i = pos; i <= comp; i++) rst += phrase[i];
-    return rst;
-}
-
-public bool Contains(string phrase, string common)
-{
-    int counter  = 0;
-    char rsp;
-    for (int i = 0; i < phrase.Length; i++)
+    for (int i = 0; i < texto.Length; i++)
     {
-        rsp = phrase[i];
-        
+        c = true;
+        for (int j = 0; j < palavra.Length; j++)
+        {
+            if (texto[i + j] != palavra[j])
+            {
+                c = false;
+                break;
+            }
+        }
+        if (c) return true;
     }
     return false;
 }
 
-Console.WriteLine(Contains("coisa bunita", "coisa"));
+public void Main()
+{
+    try
+    {
+        Console.Write("Verificar\nString: ");
+        char text = Console.ReadLine();
+        Console.Write("Palavra: ");
+        char word = Console.ReadLine();
+        Console.WriteLine(Contem(text, word));
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"\nAn error has ocurred: {ex.Message}\n");
+        Main();
+    }
+    finally
+    {
+        Console.Write("Again? [Y/n] ");
+        string repet  = Console.ReadLine().ToLower();
+        if (repet == "n") 
+        {
+            Console.WriteLine("Goodbay");
+            Environment.Exit(0);   
+        }
+        else if (repet == "" || repet == "y")
+        {
+            Console.WriteLine();
+            Main();
+        }
+    }
+}
+
+Main();
